@@ -1,0 +1,15 @@
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/bin/Debug/net7.0/codeChallenge
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/bin/Debug/net7.0/codeChallenge.deps.json
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/bin/Debug/net7.0/codeChallenge.runtimeconfig.json
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/bin/Debug/net7.0/codeChallenge.dll
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/bin/Debug/net7.0/codeChallenge.pdb
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.csproj.AssemblyReference.cache
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.AssemblyInfoInputs.cache
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.AssemblyInfo.cs
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.csproj.CoreCompileInputs.cache
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.dll
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/refint/codeChallenge.dll
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.pdb
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/codeChallenge.genruntimeconfig.cache
+/Users/tatiana/Desktop/codeChallenge/codeChallenge/obj/Debug/net7.0/ref/codeChallenge.dll

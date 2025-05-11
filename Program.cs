@@ -47,133 +47,37 @@ public class Program
         switch (key)
         {
             case '2':
-                if (length == 1)
-                {
-                    Console.WriteLine("a");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("b");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("c");
-                }
-                break;
-
+            Console.WriteLine(GetLetterKeypad("abc", length));  // Calls GetLetterKeypad
+            break;
+            
+            
             case '3':
-                if (length == 1)
-                {
-                    Console.WriteLine("d");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("e");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("f");
-                }
-                break;
+               Console.WriteLine(GetLetterKeypad("def", length));  
+            break;
 
             case '4':
-                if (length == 1)
-                {
-                    Console.WriteLine("g");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("h");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("i");
-                }
-                break;
+               Console.WriteLine(GetLetterKeypad("hij", length));  
+            break;
 
             case '5':
-                if (length == 1)
-                {
-                    Console.WriteLine("j");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("k");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("l");
-                }
-                break;
+                Console.WriteLine(GetLetterKeypad("jkl", length));  
+            break;
 
             case '6':
-                if (length == 1)
-                {
-                    Console.WriteLine("m");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("n");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("o");
-                }
-                break;
+                Console.WriteLine(GetLetterKeypad("mno", length));  
+            break;
 
             case '7':
-                if (length == 1)
-                {
-                    Console.WriteLine("p");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("q");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("r");
-                }
-                 else if (length == 4)
-                {
-                    Console.WriteLine("s");
-                }
-                break;  
+                Console.WriteLine(GetLetterKeypad("pqrs", length)); 
+            break;
 
             case '8':
-                if (length == 1)
-                {
-                    Console.WriteLine("t");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("u");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("v");
-                }
-                break;    
+                Console.WriteLine(GetLetterKeypad("tuv", length));  
+            break;
 
             case '9':
-                if (length == 1)
-                {
-                    Console.WriteLine("w");
-                }
-                else if (length == 2)
-                {
-                    Console.WriteLine("x");
-                }
-                else if (length == 3)
-                {
-                    Console.WriteLine("y");
-                }
-                 else if (length == 3)
-                {
-                    Console.WriteLine("z");
-                }
-                break;    
-                
+               Console.WriteLine(GetLetterKeypad("wxyz", length)); 
+            break;        
 
             default:
                 Console.WriteLine("Invalid input.");
@@ -181,4 +85,18 @@ public class Program
         }
 
     }
+
+   // Helper method 
+    private static string GetLetterKeypad(string letters, int pressCount)
+    {
+        if (pressCount > 0 && pressCount <= letters.Length)
+        {
+            return letters[pressCount - 1].ToString();
+        }
+        else
+        {
+            return "Invalid input.";
+        }
+    }
 }
+  

@@ -22,14 +22,14 @@ public class Program
         Console.WriteLine("Press # to finish the sequence");
 
 
-        while (true) 
+        while (true)
         {
             // Get user input
             string input = Console.ReadLine();
 
             if (input == "#")
                 break; // exit the loop
-            
+
             if (input.Length > 0)
             {
                 // Call  ProcessChoice method 
@@ -45,7 +45,7 @@ public class Program
     }
 
     // Method to process the input and print the correct letter
-    private static void ProcessChoice(string input)
+    public static void ProcessChoice(string input)
     {
         // Extract the first character of the input
         char key = input[0];
@@ -73,11 +73,11 @@ public class Program
         else
         {
             message.Append(letter); //add letter to the message
-        }       
+        }
     }
 
     // Helper method 
-    private static string GetLetterKeypad(string letters, int pressCount)
+    public static string GetLetterKeypad(string letters, int pressCount)
     {
         if (pressCount > 0 && pressCount <= letters.Length)
         {
@@ -89,5 +89,7 @@ public class Program
 
         }
     }
+    
+    
 
 }

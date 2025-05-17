@@ -17,22 +17,22 @@ namespace codeChallengeParent
         [Fact]
         public void GetLetterKeypad_TwoPressesOfThree_ReturnsE()
         {
-          
+            // Act
             var result = Program.GetLetterKeypad("def", 2);
 
            
             Assert.Equal("e", result);
         }
-        
-       [Fact]
-public void ProcessChoice_ZeroPress_ReturnsInvalidInput()
-{
-   
-    Program.ProcessChoice("0"); 
+        [Fact]
+    public void GetLetterKeypad_ExcessivePress_ReturnsInvalidInput()
+    {
+       
+        var result = Program.GetLetterKeypad("abc", 5);
 
-    
-    Assert.Equal("invalid input", Console.ReadLine());  
-}
+       
+        Assert.Equal("Invalid input.", result);
+    }
+       
 
 
     }

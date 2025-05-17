@@ -1,8 +1,13 @@
 ﻿
+using System.Data;
 using System;
+using System.Text;
 
 public class Program
 {
+    static StringBuilder message = new StringBuilder();
+
+
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the message system of the phone nokia, in order to write a letter please press a number");
@@ -17,21 +22,26 @@ public class Program
         Console.WriteLine("Press # to finish the sequence");
 
 
-
-        // Get user input
-        string input = Console.ReadLine();
-
-        // Check if input length is greater than 0
-        if (input.Length > 0)
+        while (true) 
         {
-            // Call the ProcessChoice method with the user input
-            ProcessChoice(input);
+            // Get user input
+            string input = Console.ReadLine();
+
+            if (input == "#")
+                break; // exit the loop
+            
+            if (input.Length > 0)
+            {
+                // Call  ProcessChoice method 
+                ProcessChoice(input);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
         }
-        else 
-        {
-            Console.WriteLine("Invalid input.");
-        }
-        
+        Console.WriteLine("the message is " + message.ToString());
     }
 
     // Method to process the input and print the correct letter
@@ -40,54 +50,33 @@ public class Program
         // Extract the first character of the input
         char key = input[0];
 
-        // Get the length of the input
+        // Get the length
         int length = input.Length;
 
-        // Switch based on the first key pressed
-        switch (key)
+        // Switch statement key 
+        string letter = key switch
         {
-            case '2':
-            Console.WriteLine(GetLetterKeypad("abc", length));  // Calls GetLetterKeypad
-            break;
-            
-            
-            case '3':
-               Console.WriteLine(GetLetterKeypad("def", length));  
-            break;
-
-            case '4':
-               Console.WriteLine(GetLetterKeypad("hij", length));  
-            break;
-
-            case '5':
-                Console.WriteLine(GetLetterKeypad("jkl", length));  
-            break;
-
-            case '6':
-                Console.WriteLine(GetLetterKeypad("mno", length));  
-            break;
-
-            case '7':
-                Console.WriteLine(GetLetterKeypad("pqrs", length)); 
-            break;
-
-            case '8':
-                Console.WriteLine(GetLetterKeypad("tuv", length));  
-            break;
-
-            case '9':
-               Console.WriteLine(GetLetterKeypad("wxyz", length)); 
-            break;        
-
-            default:
-            
-                Console.WriteLine("Invalid input.");
-                break;
+            '2' => GetLetterKeypad("abc", length),
+            '3' => GetLetterKeypad("def", length),
+            '4' => GetLetterKeypad("ghi", length),
+            '5' => GetLetterKeypad("jkl", length),
+            '6' => GetLetterKeypad("mno", length),
+            '7' => GetLetterKeypad("pqrs", length),
+            '8' => GetLetterKeypad("tuv", length),
+            '9' => GetLetterKeypad("wxyz", length),
+            _ => "invalid input"
+        };
+        if (letter == "invalid input")
+        {
+            Console.WriteLine("invalid input");
         }
-
+        else
+        {
+            message.Append(letter); //add letter to the message
+        }       
     }
 
-   // Helper method 
+    // Helper method 
     private static string GetLetterKeypad(string letters, int pressCount)
     {
         if (pressCount > 0 && pressCount <= letters.Length)
@@ -97,7 +86,8 @@ public class Program
         else
         {
             return "Invalid input.";
+
         }
     }
+
 }
-  
